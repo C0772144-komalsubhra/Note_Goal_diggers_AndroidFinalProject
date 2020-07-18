@@ -1,4 +1,6 @@
 package com.example.note_goal_diggers_android;
 
-public class CategoryModel {
+import java.io.Serializable;
+
+public class CategoryModel  implements Serializable {
 }
