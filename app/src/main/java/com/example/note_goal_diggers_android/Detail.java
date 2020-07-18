@@ -13,6 +13,8 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
 public class Detail extends AppCompatActivity {
     long id;
 
@@ -34,7 +36,8 @@ public class Detail extends AppCompatActivity {
         details.setText(note.getContent());
         details.setMovementMethod(new ScrollingMovementMethod());
 
-        FloatingActionButton fab = findViewById(R.id.fab);
+        FloatingActionButton fab =  findViewById(R.id.fab);
+
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
