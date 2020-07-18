@@ -16,7 +16,7 @@ public class SimpleDatabase extends SQLiteOpenHelper {
 
 
     public static final String DATABASE_NAME = "NotesDatabase";
-    public static final  int DATABASE_VERSION = 2;
+    public static final int DATABASE_VERSION = 2;
     public static final String TABLE_NAME = "notes";
     public static final String COLUMN_ID = "id";
     public static final String COLUMN_CAT = "category";
@@ -33,29 +33,31 @@ public class SimpleDatabase extends SQLiteOpenHelper {
     }
 
 
-//  new table
+    //  new table
     @Override
     public void onCreate(SQLiteDatabase db) {
-
+        String sql = "create table  " + TABLE_NAME + "(" +
+                COLUMN_ID + " integer not null constraint note_pk primary key autoincrement," +
+                COLUMN_CAT + " varchar(200) not null, " +
+                COLUMN_TITLE + " varchar(200) not null , " +
+                COLUMN_DESC + " varchar(200) not null , " +
+                COLUMN_DATE + " varchar(200) not null , " +
+                COLUMN_LAT + " double not null , " +
+                COLUMN_LONG + " double not null , " +
+                COLUMN_AUDIO + " varchar(200)  , " +
+                COLUMN_IMAGE + " varchar(200) );";
+        ;
+        db.execSQL(sql);
     }
 
 
-//for existing table(drop the current table and create new one )
+    //for existing table(drop the current table and create new one )
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        if(oldVersion >= newVersion)
+        if (oldVersion >= newVersion)
             return;
 
-        db.execSQL("DROP TABLE IF EXISTS "+TABLE_NAME);
+        db.execSQL("DROP TABLE IF EXISTS " + TABLE_NAME);
         onCreate(db);
     }
-    public long addNote(Note note){
-
-    }
-
-    public Note getNote(long id){
-
-
-    }
-
-    public List<Note> getAllNotes(){}
+}
