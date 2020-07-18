@@ -28,6 +28,11 @@
         <activity android:name=".Detail" />
         <activity android:name=".AddNote" />
         <activity android:name=".MainActivity">
+
+
+            <meta-data
+                android:name="com.google.android.geo.API_KEY"
+                android:value="AIzaSyCtyQQm0w-eVhwfDKisu5rrZD-ADGzZWH4" />
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
