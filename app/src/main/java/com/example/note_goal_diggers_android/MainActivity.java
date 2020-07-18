@@ -14,13 +14,19 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Adapter;
 import android.widget.Button;
+import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
+
+    ListView listView;
+    public static ArrayList<String> categoryName;
+    public static int catPosition;
     Button addCategory;
     SimpleDatabase dataBaseHelper;
     @Override
@@ -32,6 +38,9 @@ public class MainActivity extends AppCompatActivity {
         actionBar.setTitle("Categories");
 
 
-       
+        listView = findViewById(R.id.category_list_view);
         addCategory = findViewById(R.id.btn_add_category);
-    }}
+        categoryName = new ArrayList<>();
+        dataBaseHelper = new  SimpleDatabase(this);
+    }
+}
