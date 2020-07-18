@@ -58,4 +58,66 @@ public class SimpleDatabase extends SQLiteOpenHelper {
         db.execSQL(sql);
         onCreate(db);
     }
+    boolean addNote( String category, String title, String desc, String date ,double latitude, double longitude,String audio,String image){
+
+
+        SQLiteDatabase sqLiteDatabase = getWritableDatabase();
+
+        ContentValues cv = new ContentValues();
+
+        cv.put(COLUMN_CAT,category);
+        cv.put(COLUMN_TITLE,title);
+        cv.put(COLUMN_DESC,desc);
+        cv.put(COLUMN_DATE,date);
+        cv.put(COLUMN_LAT,latitude);
+        cv.put(COLUMN_LONG,longitude);
+        cv.put(COLUMN_AUDIO,audio);
+        cv.put(COLUMN_IMAGE,image);
+
+
+
+        return sqLiteDatabase.insert(TABLE_NAME,null,cv) != -1;
+
     }
+
+    Cursor getAllNotes(){
+        SQLiteDatabase sqLiteDatabase = getReadableDatabase();
+
+        return sqLiteDatabase.rawQuery("select * from " + TABLE_NAME + " where " + COLUMN_CAT + " =?",new String[]{MainActivity.categoryName.get(MainActivity.catPosition)} );
+    }
+
+
+    Cursor getAllSortedNotes(String col){
+        SQLiteDatabase sqLiteDatabase = getReadableDatabase();
+
+        return sqLiteDatabase.rawQuery("select * from " + TABLE_NAME + " where " + COLUMN_CAT + " =?" + " ORDER BY " + col, new String[]{MainActivity.categoryName.get(MainActivity.catPosition)} );
+    }
+
+
+
+
+    boolean updateNote(int id, String title, String desc,String audio,String image){
+        SQLiteDatabase sqLiteDatabase = getWritableDatabase();
+        ContentValues cv = new ContentValues();
+
+        cv.put(COLUMN_TITLE,title);
+        cv.put(COLUMN_DESC,desc);
+        cv.put(COLUMN_AUDIO,audio);
+        cv.put(COLUMN_IMAGE,image);
+
+        // this method returns the number of rows affected
+
+        return sqLiteDatabase.update(TABLE_NAME,cv,COLUMN_ID + "=?",new String[]{String.valueOf(id)}) > 0;
+    }
+
+    boolean deletenote(int id){
+        SQLiteDatabase sqLiteDatabase = getWritableDatabase();
+
+        //the delete method returns the number of rows affected
+
+        return sqLiteDatabase.delete(TABLE_NAME,COLUMN_ID + "=?", new String[]{String.valueOf(id)}) > 0;
+    }
+
+
+
+}
