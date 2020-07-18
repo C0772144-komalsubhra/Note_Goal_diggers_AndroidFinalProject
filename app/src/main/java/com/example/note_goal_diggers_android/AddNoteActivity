@@ -19,4 +19,5 @@ public class AddNoteActivity extends AppCompatActivity {
     CategoryModal notes;
     String categoryName;
     Intent intent;
+    NoteDetailFragment fragment;
     }
