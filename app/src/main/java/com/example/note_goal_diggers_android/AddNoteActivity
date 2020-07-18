@@ -1,4 +1,4 @@
-
+package com.example.note_goal_diggers_android;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
@@ -13,3 +13,10 @@ import android.view.MenuItem;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
+public class AddNoteActivity extends AppCompatActivity {
+
+    private ActionBar actionBar;
+    CategoryModal notes;
+    String categoryName;
+    Intent intent;
+    }
