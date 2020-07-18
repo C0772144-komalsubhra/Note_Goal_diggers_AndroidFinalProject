@@ -1,6 +1,7 @@
 package com.example.note_goal_diggers_android;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -13,15 +14,15 @@ import android.view.View;
 import android.widget.Adapter;
 import android.widget.TextView;
 import android.widget.Toast;
-import android.widget.Toolbar;
 
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
-    Toolbar toolbar;
+  Toolbar toolbar;
     RecyclerView recyclerView;
-    Adapter adapter;
+
+ RecyclerView.Adapter adapter;
     TextView noItemText;
     SimpleDatabase simpleDatabase;
     @Override
