@@ -26,9 +26,18 @@ public class SimpleDatabase extends SQLiteOpenHelper {
 
 
     @Override
-    public void onCreate(SQLiteDatabase sqLiteDatabase) {
-
+    public void onCreate(SQLiteDatabase db) {
+        String createDb = "CREATE TABLE "+TABLE_NAME+" ("+
+                KEY_ID+" INTEGER PRIMARY KEY,"+
+                KEY_TITLE+" TEXT,"+
+                KEY_CONTENT+" TEXT,"+
+                KEY_DATE+" TEXT,"+
+                KEY_TIME+" TEXT"
+                +" )";
+        db.execSQL(createDb);
     }
+
+
 
     @Override
     public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
