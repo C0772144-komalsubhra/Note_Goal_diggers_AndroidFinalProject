@@ -54,10 +54,8 @@ public class SimpleDatabase extends SQLiteOpenHelper {
     //for existing table(drop the current table and create new one )
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        if (oldVersion >= newVersion)
-            return;
-
-        db.execSQL("DROP TABLE IF EXISTS " + TABLE_NAME);
+        String sql  = "drop table if exists " + TABLE_NAME + ";";
+        db.execSQL(sql);
         onCreate(db);
     }
-}
+    }
