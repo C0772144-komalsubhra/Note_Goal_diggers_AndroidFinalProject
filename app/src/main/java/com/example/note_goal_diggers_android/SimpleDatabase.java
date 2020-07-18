@@ -24,7 +24,7 @@ public class SimpleDatabase extends SQLiteOpenHelper {
     private static final String KEY_DATE = "date";
     private static final String KEY_TIME = "time";
 
-
+//  new table
     @Override
     public void onCreate(SQLiteDatabase db) {
         String createDb = "CREATE TABLE "+TABLE_NAME+" ("+
@@ -38,7 +38,7 @@ public class SimpleDatabase extends SQLiteOpenHelper {
     }
 
 
-
+//for existing table(drop the current table and create new one )
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         if(oldVersion >= newVersion)
