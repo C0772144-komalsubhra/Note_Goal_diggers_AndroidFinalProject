@@ -6,7 +6,9 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -18,6 +20,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -42,5 +45,13 @@ public class MainActivity extends AppCompatActivity {
         addCategory = findViewById(R.id.btn_add_category);
         categoryName = new ArrayList<>();
         dataBaseHelper = new  SimpleDatabase(this);
+
+        final SharedPreferences sharedPreferences = this.getSharedPreferences("com.example.note_goal_diggers_android", Context.MODE_PRIVATE);
+
+        try {
+            categoryName = (ArrayList<String>) ObjectSerializer.deserialize(sharedPreferences.getString("cname",ObjectSerializer.serialize(new ArrayList<>())));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }
