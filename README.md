@@ -29,5 +29,6 @@ Currently the following functions are implemented:
 *  implementation 'com.google.maps.android:android-maps-utils:0.5'
 
 # Screenshots
-- ms:displayname=Search%20Results%20in%20Downloads&crumb=System.Generic.String%3AScree&crumb=location:C%3A%5CUsers%5Cwin10%5CDownloads)
+* [Splash Screen](https://github.com/C0772144-komalsubhra/Note_Goal_diggers_AndroidFinalProject/blob/master/app/src/main/res/drawable/Screenshot_20200719-135829_note_Goal_diggers_android.jpg)
+
 
