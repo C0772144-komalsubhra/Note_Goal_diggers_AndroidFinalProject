@@ -28,4 +28,5 @@ Currently the following functions are implemented:
 * implementation 'com.google.android.gms:play-services-maps:17.0.0'
 *  implementation 'com.google.maps.android:android-maps-utils:0.5'
 
-# 
+# Screenshots
+
