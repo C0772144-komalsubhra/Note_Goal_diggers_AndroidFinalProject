@@ -29,6 +29,8 @@ Currently the following functions are implemented:
 *  implementation 'com.google.maps.android:android-maps-utils:0.5'
 
 # Screenshots
-* [Splash Screen](https://github.com/C0772144-komalsubhra/Note_Goal_diggers_AndroidFinalProject/blob/master/app/src/main/res/drawable/Screenshot_20200719-135829_note_Goal_diggers_android.jpg)
+* [Splash Screen]
+(https://github.com/C0772144-komalsubhra/Note_Goal_diggers_AndroidFinalProject/blob/master/app/src/main/res/drawable/Screenshot_20200719-135829_note_Goal_diggers_android.jpg)
+
 
 
