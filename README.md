@@ -1,1 +1,2 @@
-# Note_Goal_diggers_AndroidFinalProject
+# Note_Goal_diggers_Android
+# Final Project Android
