@@ -3,5 +3,18 @@ Note taking open-source application aimed to have both a simple interface but ke
 # Contributors
 [Komal Subhra]
 [Gagandeep Kaur]
+# Features
+Currently the following functions are implemented:
+
+Material Design interface 
+Search for specific note
+Image attachment
+Audio Attachment
+Manage your notes using tags and categories
+User Current location 
+User can delete and update note
+move note to another category 
+
+
 # Screenshots
 # 
