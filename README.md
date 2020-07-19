@@ -18,5 +18,14 @@ Currently the following functions are implemented:
 * Move note to another category 
 
 
-# Screenshots
+# Dependenices
+* implementation 'com.android.support:recyclerview-v7:30.0.0'
+* implementation 'com.android.support:cardview-v7:30.0.0'
+* implementation 'androidx.recyclerview:recyclerview:1.1.0'
+* implementation 'com.google.android.material:material:1.0.0'
+* implementation 'com.google.android.material:material:1.1.0'
+* implementation 'com.google.android.gms:play-services-location:17.0.0'
+* implementation 'com.google.android.gms:play-services-maps:17.0.0'
+*  implementation 'com.google.maps.android:android-maps-utils:0.5'
+
 # 
